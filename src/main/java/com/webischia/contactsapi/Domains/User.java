@@ -1,4 +1,4 @@
-package com.webischia.contacsapi.Domains;
+package com.webischia.contactsapi.Domains;
 
 import lombok.Data;
 
@@ -13,7 +13,7 @@ public class User {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
 
-    private String password;
+   // private String password;
 
     private String name;
 
@@ -21,11 +21,11 @@ public class User {
 
     private String email;
 
-    private int phone; //todo çok ileride sms entegrasyonu yapabilirim
+  //  private int phone; //todo çok ileride sms entegrasyonu yapabilirim
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "access_id", nullable = false)
-    private AccessLevel accessLevel;
+    private AccessLevel access_id;
 
 
     @Temporal(TemporalType.TIMESTAMP)

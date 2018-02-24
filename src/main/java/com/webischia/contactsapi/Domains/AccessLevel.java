@@ -1,4 +1,4 @@
-package com.webischia.contacsapi.Domains;
+package com.webischia.contactsapi.Domains;
 
 import lombok.Data;
 

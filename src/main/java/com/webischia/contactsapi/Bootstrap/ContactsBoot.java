@@ -1,7 +1,7 @@
-package com.webischia.contacsapi.Bootstrap;
+package com.webischia.contactsapi.Bootstrap;
 
-import com.webischia.contacsapi.Repositories.ContactsRepository;
-import com.webischia.contacsapi.Repositories.UserRepository;
+import com.webischia.contactsapi.Repositories.ContactsRepository;
+import com.webischia.contactsapi.Repositories.UserRepository;
 
 public class ContactsBoot {
 
@@ -13,5 +13,9 @@ public class ContactsBoot {
         this.contactsRepository = contactsRepository;
     }
 
+    public void run()
+    {
+
+    }
 
 }
