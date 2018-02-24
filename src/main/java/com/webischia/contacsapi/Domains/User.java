@@ -2,10 +2,7 @@ package com.webischia.contacsapi.Domains;
 
 import lombok.Data;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Data
 @Entity
@@ -24,4 +21,8 @@ public class User {
     private String email;
 
     private int phone; //todo çok ileride sms entegrasyonu yapabilirim
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "access_id", nullable = false)
+    private AccessLevel accessLevel;
 }
