@@ -2,10 +2,8 @@ package com.webischia.contacsapi.Domains;
 
 import lombok.Data;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.Date;
 
 @Data
 @Entity
@@ -23,4 +21,11 @@ public class Contacts {
 
     private int phone2;
 
+    @ManyToOne
+    @JoinColumn(name = "user_id",nullable = false)
+    private User user;
+
+
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date creationDate = new Date();
 }

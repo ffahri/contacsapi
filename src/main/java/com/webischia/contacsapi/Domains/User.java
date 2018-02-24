@@ -3,6 +3,7 @@ package com.webischia.contacsapi.Domains;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.util.Date;
 
 @Data
 @Entity
@@ -25,4 +26,8 @@ public class User {
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "access_id", nullable = false)
     private AccessLevel accessLevel;
+
+
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date creationDate = new Date();
 }
