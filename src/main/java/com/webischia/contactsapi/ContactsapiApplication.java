@@ -4,9 +4,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ContacsapiApplication {
+public class ContactsapiApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ContacsapiApplication.class, args);
+		SpringApplication.run(ContactsapiApplication.class, args);
 	}
 }
